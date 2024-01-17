@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { FavoritesContext } from '../components/Favorites';
-import EntityCard from '../components/EntityCard';
+import { FavoritesContext } from '../components/Favorites.js';
+import EntityCard from '../components/EntityCard.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

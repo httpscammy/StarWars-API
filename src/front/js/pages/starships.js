@@ -25,7 +25,7 @@ return (
     <>
       <h1>Starships</h1>
       {
-        starships && starships.map(({ uid, name, url }) => {
+        starships.map(({ uid, name, url }) => {
             return(
               <EntityCard key={uid} data={{ uid, name, url, type:"starships" }} />
               )

@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function PeoplePage() {
-//   const {store, actions} = useContext(FavoritesContext);
+  const {store, actions} = useContext(FavoritesContext);
   const [people, setPeople] = useState([]);
 
 useEffect(() => {

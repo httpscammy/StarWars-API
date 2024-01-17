@@ -9,7 +9,7 @@ function EntityCard({ data }) {
   const { store, actions } = useContext(FavoritesContext);
 
   return (
-    <Card style={{ width: "18rem", margin: "30px" }}>
+    <Card className="SW-Card" style={{ width: "18rem", margin: "30px", display: "inline-block" }}>
       <Card.Img
         variant="top"
         src={`https://starwars-visualguide.com/assets/img/${data.type}/${data.uid}.jpg`}
