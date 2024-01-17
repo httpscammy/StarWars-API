@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext"
 import { Link, useNavigate } from "react-router-dom";
+import SWLogo from "../../img/SWLogo.png";
 
 import "../../styles/navbar.css"
 
@@ -17,7 +18,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light">
 			<div className="container">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+					<img className="SWLogo" src={SWLogo} />
 				</Link>
 				<div className="ml-auto">
 					{!store.token ? 
