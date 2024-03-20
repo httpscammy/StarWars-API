@@ -1,3 +1,5 @@
+const webURL = "https://scaling-space-robot-rqrv7vqxg5xfpr57-3001.app.github.dev/";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -44,7 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				};
 				try{
-					const resp = await fetch("https://scaling-bassoon-qj9gvgjx956h9x5j-3001.app.github.dev/api/signup", opts)
+					const resp = await fetch(`${webURL}/api/signup`, opts)
 					if(resp.status !== 200){
 						alert("There has been some error");
 						return false;
@@ -74,7 +76,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 			try{
-				const resp = await fetch("https://scaling-bassoon-qj9gvgjx956h9x5j-3001.app.github.dev/api/token", opts)
+				const resp = await fetch(`${webURL}/api/token`, opts)
 				if(resp.status !== 200){
 					alert("There has been some error");
 					return false;
@@ -98,7 +100,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"Authorization": "Bearer " + store.token
 					}
 				};
-				fetch("https://scaling-bassoon-qj9gvgjx956h9x5j-3001.app.github.dev/api/hello", opts)
+				fetch(`${webURL}/api/hello`, opts)
 					.then(resp => resp.json())
 					.then(data => setStore({ message: data.message }))
 					.catch(error => console.log("Error loading message from backend", error));
